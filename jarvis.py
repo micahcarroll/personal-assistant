@@ -1,17 +1,17 @@
 import sys
-import requests 
+import requests
 import json
 import apis
 
 def square(n):
-    """ Square numbers  
+    """ Square numbers
 
     >>> square(2)
-    4 
+    4
     >>> square(3)
     8
     """
-    return n**n
+    return n**2
 
 def dispatcher(command, arg):
     """ Does things """
@@ -23,11 +23,11 @@ def dispatcher(command, arg):
     elif command == "go away":
         print("It sounds like you no longer need my assistance")
         print("Very well. Goodbye!")
-        return 
+        return
     elif command == "bye":
         print("Goodbye! Have a good day!")
         return
-    # Reprompt the user. 
+    # Reprompt the user.
     prompter()
 
 
@@ -55,7 +55,7 @@ def starter(cliargs):
 
     if (len(cliargs) > 1):
         command = cliargs[2]
-        # TODO: Call dispatcher with args instead of prompting user. 
+        # TODO: Call dispatcher with args instead of prompting user.
     else:
         prompter()
 
